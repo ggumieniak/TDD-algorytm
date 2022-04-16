@@ -24,6 +24,46 @@ struct StepsInPrime {
 		} else if step < 2 || begin < 2 || end < 2 {
 			throw StepsInPrimeError.inputNegativeOrLesserThenTwo
 		}
-		return (5,7)
+		let primeArray = createPrimeArrayFrom(Array(begin...end))
+		return findTupleOfPrimeSteps(at: primeArray, step: step)
 	}
+	
+	private func createPrimeArrayFrom(_ givenArray: [Int]) -> [Int] {
+			var primes: [Int] = []
+			for number in givenArray {
+				if number % 2 == 0 || number % 3 == 0 || number <= 1 {
+					continue
+				} else if number == 2 || number == 3 {
+					primes.append(number)
+				}
+				var i = 5
+				var flag = true
+				while(i * i <= number) {
+					if number % i == 0 || number % (i + 2) == 0
+					{
+						flag = false
+					}
+					i += 6;
+				}
+				flag ? primes.append(number) : nil
+			}
+			return primes
+		}
+		
+		private func findTupleOfPrimeSteps(at primes: [Int], step: Int) -> (Int,Int)? {
+			var i = 0
+			let primesCount = primes.count - 1
+			while (i < primesCount) {
+				var j = i + 1
+				repeat {
+					print(primes[j],primes[i])
+					if primes[i] + step == primes[j] {
+						return (primes[i],primes[j])
+					}
+					j += 1
+				} while (primes[j] - primes[i] <= step && j < primesCount)
+				i += 1
+			}
+			return nil
+		}
 }
