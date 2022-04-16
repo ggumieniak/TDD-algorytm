@@ -18,4 +18,9 @@ class StepsInPrimeTests: XCTestCase {
 		XCTAssertEqual(first, resultFirt)
 		XCTAssertEqual(second, resultSecond)
     }
+	
+	func test_getPrimes_step2_from5to5() {
+		let result = stepsInPrime.getPrimes(2, 5, 5)
+		XCTAssertNil(result)
+		}
 }
