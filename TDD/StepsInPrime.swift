@@ -31,10 +31,10 @@ struct StepsInPrime {
 	private func createPrimeArrayFrom(_ givenArray: [Int]) -> [Int] {
 			var primes: [Int] = []
 			for number in givenArray {
-				if number % 2 == 0 || number % 3 == 0 || number <= 1 {
-					continue
-				} else if number == 2 || number == 3 {
+				if number == 2 || number == 3 {
 					primes.append(number)
+				} else if number % 2 == 0 || number % 3 == 0 || number <= 1 {
+					continue
 				}
 				var i = 5
 				var flag = true
@@ -56,12 +56,11 @@ struct StepsInPrime {
 			while (i < primesCount) {
 				var j = i + 1
 				repeat {
-					print(primes[j],primes[i])
 					if primes[i] + step == primes[j] {
 						return (primes[i],primes[j])
 					}
 					j += 1
-				} while (primes[j] - primes[i] <= step && j < primesCount)
+				} while (j < primesCount && primes[j] - primes[i] <= step)
 				i += 1
 			}
 			return nil

@@ -3,4 +3,54 @@
    uuid = "A91ADEC6-1581-46A5-BA3C-5056AA0FE880"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7F63B857-E966-4898-B754-0F9D37244E63"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TDD/StepsInPrime.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "getPrimes(_:_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7F63B857-E966-4898-B754-0F9D37244E63 - bf28022e2aa3d18c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TDD.StepsInPrime.getPrimes(Swift.Int, Swift.Int, Swift.Int) throws -&gt; Swift.Optional&lt;(Swift.Int, Swift.Int)&gt;"
+                  moduleName = "TDD"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grzegorzgumieniak/Developer/Studia/TDD/TDD/StepsInPrime.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "467">
+               </Location>
+               <Location
+                  uuid = "7F63B857-E966-4898-B754-0F9D37244E63 - d41d40eb1cdcf353"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StepsInPrimeTests.StepsInPrime.getPrimes(Swift.Int, Swift.Int, Swift.Int) throws -&gt; Swift.Optional&lt;(Swift.Int, Swift.Int)&gt;"
+                  moduleName = "StepsInPrimeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grzegorzgumieniak/Developer/Studia/TDD/TDD/StepsInPrime.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "467">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
