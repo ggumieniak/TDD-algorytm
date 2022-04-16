@@ -9,6 +9,9 @@ import Foundation
 
 struct StepsInPrime {
 	func getPrimes(_ step: Int, _ begin: Int, _ end: Int) -> (Int, Int)? {
+		if begin == end {
+			return nil
+		}
 		return (5,7)
 	}
 }
