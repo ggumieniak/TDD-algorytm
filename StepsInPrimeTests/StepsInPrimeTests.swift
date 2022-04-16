@@ -34,4 +34,15 @@ class StepsInPrimeTests: XCTestCase {
 			XCTFail()
 		}
 	}
+	
+	func test_getPrimes_step8_from5to7() {
+		do {
+			let _ = try stepsInPrime.getPrimes(8, 5, 7)
+			XCTFail()
+		} catch StepsInPrimeError.invalidStep {
+			// its good
+		} catch {
+			XCTFail()
+		}
+	}
 }
