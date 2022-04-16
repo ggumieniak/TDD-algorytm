@@ -7,10 +7,16 @@
 
 import Foundation
 
+enum StepsInPrimeError: Error {
+	case invalidRange
+}
+
 struct StepsInPrime {
-	func getPrimes(_ step: Int, _ begin: Int, _ end: Int) -> (Int, Int)? {
+	func getPrimes(_ step: Int, _ begin: Int, _ end: Int) throws -> (Int, Int)? {
 		if begin == end {
 			return nil
+		} else if end < begin {
+			throw StepsInPrimeError.invalidRange
 		}
 		return (5,7)
 	}

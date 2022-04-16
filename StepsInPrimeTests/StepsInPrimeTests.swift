@@ -14,19 +14,19 @@ class StepsInPrimeTests: XCTestCase {
 	
 	func test_getPrimes_step2_from5to7() {
 		let (first,second) = (5,7)
-		guard let (resultFirt,resultSecond) = stepsInPrime.getPrimes(2, 5, 7) else { return XCTFail() }
+		guard let (resultFirt,resultSecond) = try? stepsInPrime.getPrimes(2, 5, 7) else { return XCTFail() }
 		XCTAssertEqual(first, resultFirt)
 		XCTAssertEqual(second, resultSecond)
     }
 	
 	func test_getPrimes_step2_from5to5() {
-		let result = stepsInPrime.getPrimes(2, 5, 5)
+		let result = try? stepsInPrime.getPrimes(2, 5, 5)
 		XCTAssertNil(result)
 		}
 	
 	func test_getPrimes_step2_from5to2() {
 		do {
-			let result = try stepsInPrime.getPrimes(2, 5, 2)
+			let _ = try stepsInPrime.getPrimes(2, 5, 2)
 			XCTFail()
 		} catch StepsInPrimeError.invalidRange {
 			// its good
