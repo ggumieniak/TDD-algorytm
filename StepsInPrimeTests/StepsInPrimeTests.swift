@@ -12,9 +12,10 @@ class StepsInPrimeTests: XCTestCase {
 
 	let stepsInPrime: StepsInPrime = .init()
 	
-    func testExample() throws {
-			XCTAssertNil(stepsInPrime.getPrimes(1,2,3))
+	func test_getPrimes_step2_from5to7() {
+		let (first,second) = (5,7)
+		guard let (resultFirt,resultSecond) = stepsInPrime.getPrimes(2, 5, 7) else { return XCTFail() }
+		XCTAssertEqual(first, resultFirt)
+		XCTAssertEqual(second, resultSecond)
     }
-
-
 }
