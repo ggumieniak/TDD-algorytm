@@ -72,4 +72,11 @@ class StepsInPrimeTests: XCTestCase {
 			XCTFail()
 		}
 	}
+	
+	func test_getPrimes_step4_from130to200() {
+		let (first,second) = (163,167)
+		guard let (resultFirt,resultSecond) = try? stepsInPrime.getPrimes(4, 130, 200) else { return XCTFail() }
+		XCTAssertEqual(first, resultFirt)
+		XCTAssertEqual(second, resultSecond)
+		}
 }
