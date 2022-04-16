@@ -10,6 +10,7 @@ import Foundation
 enum StepsInPrimeError: Error {
 	case invalidRange
 	case invalidStep
+	case inputNegativeOrLesserThenTwo
 }
 
 struct StepsInPrime {
@@ -20,6 +21,8 @@ struct StepsInPrime {
 			throw StepsInPrimeError.invalidRange
 		} else if step > end {
 			throw StepsInPrimeError.invalidStep
+		} else if step < 2 || begin < 2 || end < 2 {
+			throw StepsInPrimeError.inputNegativeOrLesserThenTwo
 		}
 		return (5,7)
 	}
