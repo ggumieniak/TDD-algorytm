@@ -45,4 +45,31 @@ class StepsInPrimeTests: XCTestCase {
 			XCTFail()
 		}
 	}
+	
+	func test_getPrimes_step_and_range_lesser_then_two() {
+		do {
+			let _ = try stepsInPrime.getPrimes(-2, 5, 7)
+			XCTFail()
+		} catch StepsInPrimeError.inputNegativeOrLesserThenTwo {
+			// its good
+		} catch {
+			XCTFail()
+		}
+		do {
+			let _ = try stepsInPrime.getPrimes(2, -5, 7)
+			XCTFail()
+		} catch StepsInPrimeError.inputNegativeOrLesserThenTwo {
+			// its good
+		} catch {
+			XCTFail()
+		}
+		do {
+			let _ = try stepsInPrime.getPrimes(2, 5, -7)
+			XCTFail()
+		} catch StepsInPrimeError.invalidRange {
+			// its good
+		} catch {
+			XCTFail()
+		}
+	}
 }
