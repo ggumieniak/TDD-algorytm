@@ -23,4 +23,15 @@ class StepsInPrimeTests: XCTestCase {
 		let result = stepsInPrime.getPrimes(2, 5, 5)
 		XCTAssertNil(result)
 		}
+	
+	func test_getPrimes_step2_from5to2() {
+		do {
+			let result = try stepsInPrime.getPrimes(2, 5, 2)
+			XCTFail()
+		} catch StepsInPrimeError.invalidRange {
+			// its good
+		} catch {
+			XCTFail()
+		}
+	}
 }
