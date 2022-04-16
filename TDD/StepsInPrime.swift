@@ -9,6 +9,7 @@ import Foundation
 
 enum StepsInPrimeError: Error {
 	case invalidRange
+	case invalidStep
 }
 
 struct StepsInPrime {
@@ -17,6 +18,8 @@ struct StepsInPrime {
 			return nil
 		} else if end < begin {
 			throw StepsInPrimeError.invalidRange
+		} else if step > end {
+			throw StepsInPrimeError.invalidStep
 		}
 		return (5,7)
 	}
